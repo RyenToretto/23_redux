@@ -77,6 +77,7 @@
       4. 生成 store 对象，以供 项目 引入，并传入组件
         组件因此可以 this.props.store.xxx 操作
 ######---- yarn add redux-thunk    // 使得 dispatch() 的参数可以接收一个函数，异步的最后还是要 dispatch 同步 action
+
             import {createStore} from "redux"
             import thunk from "redux-thunk"
             
