@@ -9,7 +9,10 @@ import Counter from "./Counter/Counter"
 import './css/base.css';
 import './css/index.css';
 
-export default connect(state=>({count: state}), {increment, decrement, incrementAsync})(Counter);
+export default connect(
+    state=>({count: state}),
+    {increment, decrement, incrementAsync}
+)(Counter);
 
 /**** 是以下代码的简写版本
  function mapStateToprops(state) {
@@ -32,7 +35,7 @@ export default connect(state=>({count: state}), {increment, decrement, increment
  
  
  connect是一个函数, 它执行返回也是一个函数, 这个函数执行返回是一个新的组件
- class 'Connect(Counter)' extends component {
+ class 'Connect(Counter)' extends Component {
     // 内部可以看到store
     render() {
         const props1 = mapStateToprops(store.getState())
